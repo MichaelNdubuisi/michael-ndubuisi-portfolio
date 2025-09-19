@@ -19,9 +19,9 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <span className="text-2xl font-semibold tracking-wide text-white">
+          <a href="#home" className="text-2xl font-semibold tracking-wide text-white hover:text-accent transition duration-300">
             Michael Ndubuisi
-          </span>
+          </a>
         </div>
 
         {/* Desktop Nav */}
