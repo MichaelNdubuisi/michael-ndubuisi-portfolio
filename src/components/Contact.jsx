@@ -1,126 +1,25 @@
-import { useRef, useState } from "react";
-import emailjs from "emailjs-com";
-import {
-  EMAILJS_SERVICE_ID,
-  EMAILJS_TEMPLATE_ID,
-  EMAILJS_PUBLIC_KEY,
-} from "../utils/emailConfig";
-import { FaWhatsapp, FaTelegramPlane, FaEnvelope } from "react-icons/fa";
+import React from "react";
+import { BsChat, BsTelephone } from "react-icons/bs";
 
 export default function Contact() {
-  const form = useRef();
-  const [sent, setSent] = useState(false);
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        form.current,
-        EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setSent(true);
-          form.current.reset();
-          setTimeout(() => setSent(false), 5000);
-        },
-        (error) => {
-          alert("Failed to send message: " + error.text);
-        }
-      );
-  };
-
   return (
-    <section id="contact" className="bg-primary text-text px-6 py-20">
-      <div className="max-w-4xl mx-auto space-y-12 text-center">
-        {/* Heading */}
-        <div className="fade-in-down">
-          <h2 className="text-3xl sm:text-4xl font-bold">Contact</h2>
-          <p className="text-gray-400 mt-2">
-            Have a project or idea in mind? I'd love to hear from you. Use the
-            form below or{" "}
-            <a
-              href="https://wa.me/2347046999780"
-              target="_blank"
-              rel="noreferrer"
-              className="text-accent hover:underline"
-            >
-              message me on WhatsApp
-            </a>{" "}
-            or{" "}
-            <a
-              href="https://t.me/+2347046999780"
-              target="_blank"
-              rel="noreferrer"
-              className="text-accent hover:underline"
-            >
-              Telegram
-            </a>
-            .
-          </p>
+    <section id="contact" className="py-16 px-6 bg-primary text-text rounded-lg shadow-md">
+      <div className="max-w-2xl mx-auto text-center">
+        <h2 className="font-serif font-bold text-4xl mb-6 text-white">Let's Work Together</h2>
+        <p className="text-xl text-white mb-8 leading-relaxed">
+          Ready to bring your next project to life? I'd love to hear about your ideas and discuss how we can create
+          something amazing together.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <a href="https://wa.me/2347046999780" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-12 px-10 bg-primary hover:bg-[#0a1a36] text-white shadow-md">
+            <BsChat className="h-5 w-5 mr-3" />
+            Send Message
+          </a>
+          <a href="tel:+2347046999780" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-primary bg-transparent text-white hover:bg-[#0a1a36] hover:text-white h-12 px-10 shadow-md">
+            <BsTelephone className="h-5 w-5 mr-3" />
+            Schedule Call
+          </a>
         </div>
-
-        {/* Contact Form */}
-        <form
-          ref={form}
-          onSubmit={sendEmail}
-          className="bg-[#101e3b] rounded-xl max-w-2xl mx-auto p-8 space-y-6 text-left fade-in-up"
-        >
-          <div>
-            <label
-              htmlFor="name"
-              className="block mb-1 text-sm text-gray-400"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              className="w-full px-4 py-2 rounded bg-[#0f1b34] text-text border border-gray-700 focus:outline-none focus:ring-1 focus:ring-accent"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="email"
-              className="block mb-1 text-sm text-gray-400"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              className="w-full px-4 py-2 rounded bg-[#0f1b34] text-text border border-gray-700 focus:outline-none focus:ring-1 focus:ring-accent"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="message"
-              className="block mb-1 text-sm text-gray-400"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              required
-              className="w-full px-4 py-2 rounded bg-[#0f1b34] text-text border border-gray-700 focus:outline-none focus:ring-1 focus:ring-accent resize-none"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="bg-accent hover:bg-cyan-500 transition px-6 py-2 rounded text-primary font-semibold"
-          >
-            {sent ? "Message Sent ✅" : "Send Message"}
-          </button>
-        </form>
       </div>
     </section>
   );

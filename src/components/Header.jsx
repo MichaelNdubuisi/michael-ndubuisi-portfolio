@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import devlyticLogo from "../assets/images/devlytic-logo.png";
 import { HiMenu, HiX } from "react-icons/hi";
-import { FaWhatsapp, FaTelegramPlane, FaGithub } from "react-icons/fa";
+import { FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const navItems = ["Home", "About", "Projects", "Contact"];
 
@@ -15,14 +14,13 @@ export default function Header() {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 w-full bg-primary/90 backdrop-blur-md text-text border-b border-white/10 shadow-sm z-50"
+      className="fixed top-0 w-full bg-[#0a1a36] backdrop-blur-md text-text border-b border-white/10 shadow-sm z-50"
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <img src={devlyticLogo} alt="Devlytic logo" className="w-10 h-10" />
           <span className="text-2xl font-semibold tracking-wide text-white">
-            Devlytic
+            Michael Ndubuisi
           </span>
         </div>
 
@@ -49,13 +47,13 @@ export default function Header() {
             <FaWhatsapp size={18} />
           </a>
           <a
-            href="https://t.me/+2347046999780"
+            href="https://www.linkedin.com/in/ndubuisi-michael-4b460537a"
             target="_blank"
             rel="noreferrer"
             className="hover:text-sky-400"
-            title="Telegram"
+            title="LinkedIn"
           >
-            <FaTelegramPlane size={18} />
+            <FaLinkedin size={18} />
           </a>
           <a
             href="https://github.com/MichaelNdubuisi"
@@ -108,12 +106,12 @@ export default function Header() {
                 <FaWhatsapp size={20} />
               </a>
               <a
-                href="https://t.me/+2347046999780"
+                href="https://www.linkedin.com/in/ndubuisi-michael-4b460537a"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-sky-400"
               >
-                <FaTelegramPlane size={20} />
+                <FaLinkedin size={20} />
               </a>
               <a
                 href="https://github.com/MichaelNdubuisi"

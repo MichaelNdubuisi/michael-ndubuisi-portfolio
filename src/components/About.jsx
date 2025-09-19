@@ -6,7 +6,7 @@ return (
 <div className="max-w-6xl w-full space-y-12">
 {/* Heading */}
 <div className="text-center fade-in-down">
-<h2 className="text-3xl sm:text-4xl font-bold">About Devlytic</h2>
+<h2 className="text-3xl sm:text-4xl font-bold">About Me</h2>
 </div>
     {/* Content: Image + Text */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -22,10 +22,9 @@ return (
       {/* Text Content */}
       <div className="space-y-6 text-center md:text-left fade-in-right">
         <p className="text-base sm:text-lg leading-relaxed text-gray-300 fade-in-up">
-          Devlytic is the portfolio and personal freelance brand of a passionate web
-          developer focused on building fast, animated, and user-friendly websites.
+          I am Michael Ndubuisi, a passionate full-stack developer focused on building fast, animated, and user-friendly websites.
           From landing pages to full business sites, I deliver clean code and sleek
-          interfaces.
+          interfaces using modern technologies like React, Node.js, and MongoDB.
         </p>
 
         {/* Two-column Info Boxes */}
@@ -33,7 +32,7 @@ return (
           <div className="p-5 rounded-xl bg-[#101e3b] fade-in-left">
             <h3 className="text-xl font-semibold mb-2">What I Do</h3>
             <p className="text-sm text-gray-400">
-              I build modern websites using HTML, Tailwind CSS, React, and Framer Motion
+              I build modern full-stack websites using HTML, CSS, JavaScript, React, Node.js, MongoDB, and deploy on Vercel and Render
               with unique animations and responsive layouts.
             </p>
           </div>

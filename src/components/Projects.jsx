@@ -3,13 +3,14 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import project1 from "../assets/images/project1.webp";
 import project2 from "../assets/images/project2.webp";
 import project3 from "../assets/images/project3.webp";
+import project4 from "../assets/images/project4.webp";
 
 const projects = [
 {
 title: "CryptoInvest",
 description: "A crypto investment dashboard with charts, plans, and calculator.",
 tech: ["React", "Tailwind CSS"],
-github: "https://github.com/yourusername/portfolio",
+github: "https://github.com/MichaelNdubuisi/portfolio",
 demo: "https://crypto-psi-dusky.vercel.app/",
 image: project1,
 },
@@ -17,7 +18,7 @@ image: project1,
 title: "Edusity",
 description: "A modern education website with a responsive design, smooth navigation, and compelling CTAs.",
 tech: ["React", "CSS3"],
-github: "https://github.com/yourusername/landing-page",
+github: "https://github.com/MichaelNdubuisi/landing-page",
 demo: "https://edusity-bice.vercel.app/",
 image: project2,
 },
@@ -25,9 +26,17 @@ image: project2,
 title: "LuxeClean",
 description: "A premium cleaning service landing page with luxury-themed design and client testimonials.",
 tech: ["React", "Tailwind CSS"],
-github: "https://github.com/yourusername/landing-page",
+github: "https://github.com/MichaelNdubuisi/landing-page",
 demo: "https://luxe-clean.vercel.app/",
 image: project3,
+},
+{
+title: "NGM Collections",
+description: "An elegant e-commerce platform offering timeless fashion collections with premium quality.",
+tech: ["React", "Tailwind CSS", "E-commerce"],
+github: "https://github.com/MichaelNdubuisi/landing-page",
+demo: "https://ngm-adaeze-shop.vercel.app/",
+image: project4,
 },
 ];
 

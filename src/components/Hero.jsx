@@ -14,11 +14,14 @@ initial="hidden"
 animate="visible"
 className="text-center space-y-6 max-w-3xl"
 >
+<h2 className="text-lg sm:text-xl text-accent font-medium">
+Welcome to My Portfolio
+</h2>
 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-I Build Stunning, Fast & Animated Websites
+Full-Stack Developer Crafting Innovative Web Solutions
 </h1>
 <p className="text-base sm:text-lg text-gray-300">
-Devlytic delivers clean, responsive, and modern web experiences for freelancers, businesses, and creators.
+I specialize in delivering clean, responsive, and modern web experiences tailored for freelancers, businesses, and creators.
 </p>
 <motion.a
 href="#projects"
@@ -26,7 +29,7 @@ whileHover={{ scale: 1.05 }}
 whileTap={{ scale: 0.95 }}
 className="inline-block mt-4 px-6 py-3 bg-accent text-primary font-semibold rounded-xl transition duration-300"
 >
-View Projects
+Explore My Work
 </motion.a>
 </motion.div>
 </section>

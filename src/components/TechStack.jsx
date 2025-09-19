@@ -1,5 +1,5 @@
-import { FaReact, FaHtml5, FaCss3Alt, FaGitAlt } from "react-icons/fa";
-import { SiTailwindcss, SiFramer, SiJavascript, SiVite } from "react-icons/si";
+import { FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaNodeJs } from "react-icons/fa";
+import { SiTailwindcss, SiFramer, SiJavascript, SiVite, SiMongodb, SiVercel, SiRender } from "react-icons/si";
 
 const tech = [
   { name: "HTML5", icon: <FaHtml5 size={32} className="text-orange-500" /> },
@@ -10,6 +10,10 @@ const tech = [
   { name: "Framer Motion", icon: <SiFramer size={32} className="text-pink-400" /> },
   { name: "Git", icon: <FaGitAlt size={32} className="text-red-500" /> },
   { name: "Vite", icon: <SiVite size={32} className="text-purple-400" /> },
+  { name: "Node.js", icon: <FaNodeJs size={32} className="text-green-500" /> },
+  { name: "MongoDB", icon: <SiMongodb size={32} className="text-green-600" /> },
+  { name: "Vercel", icon: <SiVercel size={32} className="text-black" /> },
+  { name: "Render", icon: <SiRender size={32} className="text-blue-500" /> },
 ];
 
 export default function TechStack() {

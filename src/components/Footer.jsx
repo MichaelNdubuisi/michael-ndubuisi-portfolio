@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaTelegramPlane, FaEnvelope, FaGithub } from "react-icons/fa";
+import { FaWhatsapp, FaLinkedin, FaEnvelope, FaGithub } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 export default function Footer() {
@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         {/* Branding */}
         <div className="text-center md:text-left">
-          <h3 className="text-xl font-bold text-text">Devlytic</h3>
+          <h3 className="text-xl font-bold text-text">Michael Ndubuisi</h3>
           <p className="text-sm text-gray-500 mt-1">Creative Freelance Web Developer</p>
         </div>
 
@@ -58,15 +58,15 @@ export default function Footer() {
             <FaWhatsapp />
           </a>
           <a
-            href="https://t.me/+2347046999780"
+            href="https://www.linkedin.com/in/ndubuisi-michael-4b460537a"
             target="_blank"
             rel="noreferrer"
             className="hover:text-sky-400 transition"
           >
-            <FaTelegramPlane />
+            <FaLinkedin />
           </a>
           <a
-            href="mailto:devlytic.web@gmail.com"
+            href="mailto:mr.michaelndubuisi@gmail.com"
             className="hover:text-red-400 transition"
           >
             <FaEnvelope />
@@ -84,7 +84,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="mt-8 text-center text-xs text-gray-500">
-        © {new Date().getFullYear()} Devlytic. All rights reserved.
+        © {new Date().getFullYear()} Michael Ndubuisi. All rights reserved.
       </div>
     </footer>
   );
