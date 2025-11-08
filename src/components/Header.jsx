@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
 import { FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
-import logo from "/src/assets/images/michael-ndubuisi-logo.jpeg";
+import logo from "../assets/images/michael-ndubuisi-logo.jpeg";
 
 const navItems = ["Home", "About", "Projects", "Contact"];
 
