@@ -74,7 +74,7 @@ export default function Hero() {
           className="flex-shrink-0"
         >
           <img
-            src="/src/assets/images/michael-ndubuisi-logo.jpeg"
+            src="/michael-ndubuisi-logo.jpeg"
             alt="Michael Ndubuisi"
             className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-2xl border-4 border-accent"
           />
