@@ -18,9 +18,9 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-3">
-          <a href="#home" className="text-2xl font-semibold tracking-wide text-white hover:text-accent transition duration-300">
-            Michael Ndubuisi
+        <div className="flex items-center space-x-3 w-28 h-24">
+          <a href="#home" className="hover:opacity-80 transition duration-300">
+            <img src="/src/assets/images/michael-ndubuisi-logo.jpeg" alt="Michael Ndubuisi Logo" className="h-24 w-24" />
           </a>
         </div>
 
