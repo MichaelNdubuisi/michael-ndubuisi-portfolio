@@ -7,8 +7,8 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         {/* Branding */}
         <div className="text-center md:text-left">
-          <h3 className="text-xl font-bold text-text">Michael Ndubuisi</h3>
-          <p className="text-sm text-gray-500 mt-1">Creative Freelance Web Developer</p>
+          <h3 className="text-xl font-bold text-text">Mikos Digital</h3>
+          <p className="text-sm text-gray-500 mt-1">Digital Agency & Web Solutions</p>
         </div>
 
         {/* Navigation Links */}
@@ -84,7 +84,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="mt-8 text-center text-xs text-gray-500">
-        © {new Date().getFullYear()} Michael Ndubuisi. All rights reserved.
+        © {new Date().getFullYear()} Mikos Digital. All rights reserved.
       </div>
     </footer>
   );

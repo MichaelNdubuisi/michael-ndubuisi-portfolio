@@ -6,7 +6,7 @@ return (
 <div className="max-w-6xl w-full space-y-12">
 {/* Heading */}
 <div className="text-center fade-in-down">
-<h2 className="text-3xl sm:text-4xl font-bold">About Me</h2>
+<h2 className="text-3xl sm:text-4xl font-bold">About Mikos Digital</h2>
 </div>
     {/* Content: Image + Text */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -22,25 +22,25 @@ return (
       {/* Text Content */}
       <div className="space-y-6 text-center md:text-left fade-in-right">
         <p className="text-base sm:text-lg leading-relaxed text-gray-300 fade-in-up">
-          I am Michael Ndubuisi, a passionate full-stack developer focused on building fast, animated, and user-friendly websites.
-          From landing pages to full business sites, I deliver clean code and sleek
-          interfaces using modern technologies like React, Node.js, and MongoDB.
+          Mikos Digital is a premier digital agency dedicated to delivering innovative web solutions and strategic digital marketing services.
+          We excel in transforming conceptual ideas into robust, high-performance online platforms, encompassing visually compelling landing pages
+          and fully integrated business websites, leveraging advanced technologies such as React, Node.js, and MongoDB to ensure scalability and efficiency.
         </p>
 
         {/* Two-column Info Boxes */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 gap-6">
           <div className="p-5 rounded-xl bg-[#101e3b] fade-in-left">
-            <h3 className="text-xl font-semibold mb-2">What I Do</h3>
+            <h3 className="text-xl font-semibold mb-2">Our Services</h3>
             <p className="text-sm text-gray-400">
-              I build modern full-stack websites using HTML, CSS, JavaScript, React, Node.js, MongoDB, and deploy on Vercel and Render
-              with unique animations and responsive layouts.
+              Our expertise encompasses the development of modern full-stack websites utilizing HTML, CSS, JavaScript, React, Node.js, and MongoDB,
+              deployed seamlessly on platforms like Vercel and Render, featuring bespoke animations and fully responsive designs tailored to client needs.
             </p>
           </div>
           <div className="p-5 rounded-xl bg-[#101e3b] fade-in-right">
-            <h3 className="text-xl font-semibold mb-2">Who I Work With</h3>
+            <h3 className="text-xl font-semibold mb-2">Our Clients</h3>
             <p className="text-sm text-gray-400">
-              I work with small businesses, individuals, startups, and anyone who wants
-              a professional, engaging online presence.
+              Our client portfolio includes small businesses, entrepreneurs, startups, and enterprises seeking to establish
+              a compelling and professional digital footprint that drives engagement and growth.
             </p>
           </div>
         </div>

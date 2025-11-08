@@ -15,7 +15,7 @@ export default function Header() {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 w-full bg-[#0a1a36] backdrop-blur-md text-text border-b border-white/10 shadow-sm z-50"
+      className="fixed top-0 w-full bg-transparent backdrop-blur-md text-text border-b border-white/10 shadow-sm z-50"
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
