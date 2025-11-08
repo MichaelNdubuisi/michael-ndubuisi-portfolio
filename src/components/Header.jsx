@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
 import { FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
+import logo from "/src/assets/images/michael-ndubuisi-logo.jpeg";
 
 const navItems = ["Home", "About", "Projects", "Contact"];
 
@@ -20,7 +21,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center space-x-3 w-28 h-24">
           <a href="#home" className="hover:opacity-80 transition duration-300">
-            <img src="/src/assets/images/michael-ndubuisi-logo.jpeg" alt="Michael Ndubuisi Logo" className="h-24 w-24" />
+            <img src={logo} alt="Michael Ndubuisi Logo" className="h-24 w-24" />
           </a>
         </div>
 
