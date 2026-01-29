@@ -22,6 +22,14 @@ export default function Footer() {
             About
           </Link>
           <Link
+            to="services"
+            smooth={true}
+            duration={500}
+            className="hover:text-accent cursor-pointer transition"
+          >
+            Services
+          </Link>
+          <Link
             to="projects"
             smooth={true}
             duration={500}
