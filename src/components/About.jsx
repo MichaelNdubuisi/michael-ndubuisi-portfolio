@@ -6,7 +6,7 @@ return (
 <div className="max-w-6xl w-full space-y-12">
 {/* Heading */}
 <div className="text-center fade-in-down">
-<h2 className="text-3xl sm:text-4xl font-bold">About Mikos Digital</h2>
+<h2 className="text-3xl sm:text-4xl font-bold">About Me</h2>
 </div>
     {/* Content: Image + Text */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -22,25 +22,29 @@ return (
       {/* Text Content */}
       <div className="space-y-6 text-center md:text-left fade-in-right">
         <p className="text-base sm:text-lg leading-relaxed text-gray-300 fade-in-up">
-          Mikos Digital is a premier digital agency dedicated to delivering innovative web solutions and strategic digital marketing services.
-          We excel in transforming conceptual ideas into robust, high-performance online platforms, encompassing visually compelling landing pages
-          and fully integrated business websites, leveraging advanced technologies such as React, Node.js, and MongoDB to ensure scalability and efficiency.
+          I am a results-driven full-stack developer with a proven track record of building high-impact, scalable web solutions for businesses and individuals. My expertise spans modern JavaScript frameworks (React, Node.js), UI/UX design, and backend development, enabling me to deliver seamless, responsive, and visually compelling digital experiences.
+          <br /><br />
+          <span className="font-semibold text-accent">A Bit About Me:</span>
+          <ul className="list-disc list-inside text-sm mt-2 mb-2">
+            <li>I have delivered a range of web projects for individuals, small businesses, and startups each experience contributing to my growth as a developer.</li>
+            <li>I specialize in building MVPs and prototypes that enable clients to validate ideas and gather real user feedback efficiently.</li>
+            <li>Clients and collaborators value my clear communication, reliability, and commitment to delivering practical solutions.</li>
+          </ul>
+          I am dedicated to continuous learning and welcome new challenges. If you are seeking a developer who is professional, detail-oriented, and genuinely invested in project success, I would be glad to connect.
         </p>
 
         {/* Two-column Info Boxes */}
         <div className="grid grid-cols-2 sm:grid-cols-2 gap-6">
           <div className="p-5 rounded-xl bg-[#101e3b] fade-in-left">
-            <h3 className="text-xl font-semibold mb-2">Our Services</h3>
+            <h3 className="text-xl font-semibold mb-2">What I Offer</h3>
             <p className="text-sm text-gray-400">
-              Our expertise encompasses the development of modern full-stack websites utilizing HTML, CSS, JavaScript, React, Node.js, and MongoDB,
-              deployed seamlessly on platforms like Vercel and Render, featuring bespoke animations and fully responsive designs tailored to client needs.
+              I build modern, full-stack web applications using HTML, CSS, JavaScript, React, Node.js, and MongoDB. My solutions are deployed on leading cloud platforms (Vercel, Render) and feature custom animations, advanced interactivity, and fully responsive layouts tailored to your goals.
             </p>
           </div>
           <div className="p-5 rounded-xl bg-[#101e3b] fade-in-right">
-            <h3 className="text-xl font-semibold mb-2">Our Clients</h3>
+            <h3 className="text-xl font-semibold mb-2">Who I Work With</h3>
             <p className="text-sm text-gray-400">
-              Our client portfolio includes small businesses, entrepreneurs, startups, and enterprises seeking to establish
-              a compelling and professional digital footprint that drives engagement and growth.
+              I partner with startups, entrepreneurs, and established businesses who want to elevate their digital presence, drive engagement, and achieve measurable results.
             </p>
           </div>
         </div>

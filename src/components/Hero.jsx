@@ -48,7 +48,7 @@ export default function Hero() {
             animate="visible"
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
           >
-            Full-Stack Developer & Digital Innovator
+            Full-Stack Developer & Technology Enthusiast
           </motion.h1>
           <motion.p
             variants={textVariants}
@@ -74,8 +74,8 @@ export default function Hero() {
           className="flex-shrink-0"
         >
           <img
-            src="/michael-ndubuisi-logo.jpeg"
-            alt="Michael Ndubuisi"
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=facearea&w=400&h=400&facepad=2&q=80"
+            alt="Man sitting with a laptop"
             className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-2xl border-4 border-accent"
           />
         </motion.div>

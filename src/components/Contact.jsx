@@ -7,7 +7,7 @@ export default function Contact() {
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="font-serif font-bold text-4xl mb-6 text-white">Let's Work Together</h2>
         <p className="text-xl text-white mb-8 leading-relaxed">
-          Ready to bring your digital vision to life? We'd love to hear about your ideas and discuss how we can create
+          Ready to bring your next project to life? I'd love to hear about your ideas and discuss how I can help you achieve your goals.
           something amazing together.
         </p>
         <div className="flex flex-row gap-6 justify-center">

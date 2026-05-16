@@ -1,7 +1,6 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Services from "./components/Services";
 import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 import Contact from "./components/Contact";
@@ -13,7 +12,6 @@ export default function App() {
       <Header />
       <Hero />
       <About />
-      <Services />
       <Projects />
       <TechStack />
       <Contact />
