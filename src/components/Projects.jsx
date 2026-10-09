@@ -4,8 +4,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import project2 from "../assets/images/project2.webp";
 import project3 from "../assets/images/project3.webp";
 import project4 from "../assets/images/project4.webp";
-
-import theresaVideo from "../assets/videos/theresa-hairline.mp4";
+import theresaHairline from "../assets/images/theresa-hairline.webp";
 
 const projects = [
   {
@@ -41,17 +40,12 @@ const projects = [
   {
     title: "Theresa Hairline",
     description:
-      "A cinematic brand storytelling commercial for a hair and beauty business.",
-    tech: [
-      "Content Development",
-      "Video Editing",
-      "Branding",
-      "Storytelling",
-    ],
-    video: theresaVideo,
+      "A beauty commercial featuring a polished brand identity and engaging social-first storytelling.",
+    tech: ["Branding", "Commercial", "Instagram Reel"],
+    demo: "https://www.instagram.com/reel/DeSAsPlO1uS/?srtk=c3k2ZGlwYTBvYnpr",
+    image: theresaHairline,
   },
 ];
-
 export default function Projects() {
   return (
     <section
@@ -106,7 +100,7 @@ export default function Projects() {
                   </video>
                 ) : (
                   <img
-                    src={project.image}
+                    src={project.image || project.thumbnail}
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
@@ -128,16 +122,18 @@ export default function Projects() {
                 </div>
 
                 {/* Skills / Technologies */}
-                <ul className="flex flex-wrap text-sm text-accent gap-2">
-                  {project.tech.map((tech, i) => (
-                    <li
-                      key={i}
-                      className="px-2 py-1 bg-[#0f1b34] rounded"
-                    >
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
+                {project.tech?.length > 0 && (
+                  <ul className="flex flex-wrap text-sm text-accent gap-2">
+                    {project.tech.map((tech, i) => (
+                      <li
+                        key={i}
+                        className="px-2 py-1 bg-[#0f1b34] rounded"
+                      >
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
                 {/* Links */}
                 {(project.github || project.demo) && (
