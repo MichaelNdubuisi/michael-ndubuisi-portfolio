@@ -4,7 +4,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 import { FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 
 
-const navItems = ["Home", "About", "Projects", "Contact"];
+const navItems = ["Home", "About", "Services", "Projects", "Contact"];
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

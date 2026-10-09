@@ -1,99 +1,178 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import project1 from "../assets/images/project1.webp";
+
 import project2 from "../assets/images/project2.webp";
 import project3 from "../assets/images/project3.webp";
 import project4 from "../assets/images/project4.webp";
 
+import theresaVideo from "../assets/videos/theresa-hairline.mp4";
+
 const projects = [
-{
-title: "CryptoInvest",
-description: "A crypto investment dashboard with charts, plans, and calculator.",
-tech: ["React", "Tailwind CSS"],
-github: "https://github.com/MichaelNdubuisi/portfolio",
-demo: "https://crypto-psi-dusky.vercel.app/",
-image: project1,
-},
-{
-title: "Edusity",
-description: "A modern education website with a responsive design, smooth navigation, and compelling CTAs.",
-tech: ["React", "CSS3"],
-github: "https://github.com/MichaelNdubuisi/landing-page",
-demo: "https://edusity-bice.vercel.app/",
-image: project2,
-},
-{
-title: "LuxeClean",
-description: "A premium cleaning service landing page with luxury-themed design and client testimonials.",
-tech: ["React", "Tailwind CSS"],
-github: "https://github.com/MichaelNdubuisi/landing-page",
-demo: "https://luxe-clean.vercel.app/",
-image: project3,
-},
-{
-title: "NGM Collections",
-description: "An elegant e-commerce platform offering timeless fashion collections with premium quality.",
-tech: ["React", "Tailwind CSS", "E-commerce"],
-github: "https://github.com/MichaelNdubuisi/landing-page",
-demo: "https://ngm-adaeze-shop.vercel.app/",
-image: project4,
-},
+  {
+    title: "Edusity",
+    description:
+      "A modern education website with a responsive design, smooth navigation, and compelling CTAs.",
+    tech: ["React", "CSS3"],
+    github: "https://github.com/MichaelNdubuisi/landing-page",
+    demo: "https://edusity-bice.vercel.app/",
+    image: project2,
+  },
+
+  {
+    title: "LuxeClean",
+    description:
+      "A premium cleaning service landing page with luxury-themed design and client testimonials.",
+    tech: ["React", "Tailwind CSS"],
+    github: "https://github.com/MichaelNdubuisi/landing-page",
+    demo: "https://luxe-clean.vercel.app/",
+    image: project3,
+  },
+
+  {
+    title: "NGM Collections",
+    description:
+      "An elegant e-commerce platform offering timeless fashion collections with premium quality.",
+    tech: ["React", "Tailwind CSS", "E-commerce"],
+    github: "https://github.com/MichaelNdubuisi/landing-page",
+    demo: "https://ngm-adaeze-shop.vercel.app/",
+    image: project4,
+  },
+
+  {
+    title: "Theresa Hairline",
+    description:
+      "A cinematic brand storytelling commercial for a hair and beauty business.",
+    tech: [
+      "Content Development",
+      "Video Editing",
+      "Branding",
+      "Storytelling",
+    ],
+    video: theresaVideo,
+  },
 ];
 
 export default function Projects() {
-return (
-<section id="projects" className="bg-primary text-text px-4 sm:px-6 lg:px-12 py-20">
-<div className="max-w-6xl mx-auto space-y-16">
-{/* Section Heading */}
-<motion.div
-initial={{ opacity: 0, y: -30 }}
-whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.6 }}
-viewport={{ once: true }}
-className="text-center"
->
-<h2 className="text-3xl sm:text-4xl font-bold">Projects</h2>
-<p className="text-gray-400 mt-2">Selected works I've built recently</p>
-</motion.div>
-    {/* Project Cards */}
-    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      {projects.map((project, idx) => (
+  return (
+    <section
+      id="projects"
+      className="bg-primary text-text px-4 sm:px-6 lg:px-12 py-20"
+    >
+      <div className="max-w-6xl mx-auto space-y-16">
+
+        {/* Section Heading */}
         <motion.div
-          key={idx}
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: idx * 0.2 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-[#101e3b] rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition"
+          className="text-center"
         >
-          <img
-            src={project.image}
-            alt={project.title}
-            className="h-48 sm:h-40 w-full object-cover"
-          />
-          <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <h3 className="text-xl font-semibold">{project.title}</h3>
-              <p className="text-sm text-gray-300 mt-2">{project.description}</p>
-            </div>
-            <ul className="flex flex-wrap text-sm text-accent gap-2">
-              {project.tech.map((tech, i) => (
-                <li key={i} className="px-2 py-1 bg-[#0f1b34] rounded">{tech}</li>
-              ))}
-            </ul>
-            <div className="flex gap-4 text-accent pt-2">
-              <a href={project.github} target="_blank" rel="noreferrer">
-                <FaGithub size={20} />
-              </a>
-              <a href={project.demo} target="_blank" rel="noreferrer">
-                <FaExternalLinkAlt size={18} />
-              </a>
-            </div>
-          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold">
+            Projects
+          </h2>
+
+          <p className="text-gray-400 mt-2">
+            Concept Projects and Commercials I've Worked On
+          </p>
         </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
-);
+
+        {/* Project Cards */}
+        <div className="grid grid-cols-2 gap-4 sm:gap-8 lg:grid-cols-3">
+          {projects.map((project, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: idx * 0.2,
+              }}
+              viewport={{ once: true }}
+              className="bg-[#101e3b] rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition"
+            >
+
+              {/* Project Media */}
+              <div className="w-full h-64 bg-black overflow-hidden">
+                {project.video ? (
+                  <video
+                    src={project.video}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-contain"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                )}
+              </div>
+
+              {/* Project Information */}
+              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+
+                {/* Title & Description */}
+                <div>
+                  <h3 className="text-xl font-semibold">
+                    {project.title}
+                  </h3>
+
+                  <p className="text-sm text-gray-300 mt-2">
+                    {project.description}
+                  </p>
+                </div>
+
+                {/* Skills / Technologies */}
+                <ul className="flex flex-wrap text-sm text-accent gap-2">
+                  {project.tech.map((tech, i) => (
+                    <li
+                      key={i}
+                      className="px-2 py-1 bg-[#0f1b34] rounded"
+                    >
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Links */}
+                {(project.github || project.demo) && (
+                  <div className="flex gap-4 text-accent pt-2">
+
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`View ${project.title} GitHub`}
+                      >
+                        <FaGithub size={20} />
+                      </a>
+                    )}
+
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`View ${project.title} live demo`}
+                      >
+                        <FaExternalLinkAlt size={18} />
+                      </a>
+                    )}
+
+                  </div>
+                )}
+
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
