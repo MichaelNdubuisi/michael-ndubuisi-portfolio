@@ -94,7 +94,7 @@ export default function Services() {
 
       <div className="relative mx-auto max-w-[1060px]">
         {/* Section heading */}
-        <div className="mb-8 flex flex-col justify-between gap-6 sm:mb-8 sm:flex-row sm:items-center">
+        <div className="mb-10 flex flex-col justify-between gap-6 sm:mb-10 sm:flex-row sm:items-center">
           <div className="max-w-[580px]">
             <div className="mb-3 flex items-center gap-5">
               <span className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400 sm:text-base">
@@ -133,7 +133,7 @@ export default function Services() {
         </div>
 
         {/* Services grid */}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-4">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2">
           {/* Featured website design card */}
           <article className="group relative isolate min-h-[310px] overflow-hidden rounded-2xl border border-[#123451] bg-[#031225] sm:col-span-2 sm:min-h-[290px]">
             <img
@@ -144,8 +144,8 @@ export default function Services() {
 
             <div className="absolute inset-0 -z-0 bg-gradient-to-r from-[#020d1b] via-[#020d1b]/95 to-[#020d1b]/15 sm:via-[#020d1b]/90" />
 
-            <div className="relative z-10 flex min-h-[310px] max-w-[360px] flex-col items-start justify-center p-6 sm:min-h-[290px] sm:p-7">
-              <div className="mb-3 flex items-center gap-5">
+            <div className="relative z-10 flex min-h-[310px] max-w-[360px] flex-col items-start justify-center p-7 sm:min-h-[290px] sm:p-8">
+              <div className="mb-4 flex items-center gap-5">
                 <ServiceIcon>
                   <FaCode />
                 </ServiceIcon>
@@ -158,14 +158,14 @@ export default function Services() {
                 Website Design
               </h3>
 
-              <p className="mt-3 max-w-[320px] text-sm leading-[1.8] text-blue-100/85 sm:text-base">
+              <p className="mt-4 max-w-[320px] text-sm leading-[1.8] text-blue-100/85 sm:text-base">
                 Modern, responsive and user-friendly websites that look great
                 and perform seamlessly across all devices.
               </p>
 
               <a
                 href="#projects"
-                className="group/link mt-5 inline-flex items-center gap-2 text-base font-semibold text-cyan-400 transition-colors hover:text-cyan-300"
+                className="group/link mt-6 inline-flex items-center gap-2 text-base font-semibold text-cyan-400 transition-colors hover:text-cyan-300"
               >
                 View Projects
                 <FaArrowRight className="text-xs transition-transform group-hover/link:translate-x-1" />
@@ -190,8 +190,8 @@ export default function Services() {
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#031225]/20" />
                 </div>
 
-                <div className="flex min-w-0 flex-1 flex-col items-start justify-center p-4 sm:p-5">
-                  <div className="mb-3 flex items-center gap-4">
+                <div className="flex min-w-0 flex-1 flex-col items-start justify-center p-5 sm:p-6">
+                  <div className="mb-4 flex items-center gap-4">
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-cyan-400/70 bg-cyan-400/10 text-lg text-cyan-400">
                       {service.icon}
                     </span>
@@ -204,13 +204,13 @@ export default function Services() {
                     {service.name}
                   </h3>
 
-                  <p className="mt-2 text-xs leading-[1.7] text-blue-100/85 sm:text-sm">
+                  <p className="mt-3 text-xs leading-[1.7] text-blue-100/85 sm:text-sm">
                     {service.description}
                   </p>
 
                   <a
                     href="#projects"
-                    className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-cyan-400 transition-colors hover:text-cyan-300 sm:text-sm"
+                    className="mt-5 inline-flex items-center gap-2 text-xs font-semibold text-cyan-400 transition-colors hover:text-cyan-300 sm:text-sm"
                   >
                     {service.link}
                     <FaArrowRight className="text-[10px]" />
@@ -234,9 +234,9 @@ export default function Services() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#031225]/30 to-transparent sm:bg-gradient-to-r sm:from-transparent sm:to-[#031225]/30" />
               </div>
 
-              <div className="flex items-center justify-between gap-5 p-5 sm:px-7 sm:py-6">
+              <div className="flex items-center justify-between gap-5 p-6 sm:px-8 sm:py-7">
                 <div className="max-w-[340px]">
-                  <div className="mb-2 flex items-center gap-5">
+                  <div className="mb-3 flex items-center gap-5">
                     <span className="text-2xl text-cyan-400">
                       <FaUsers />
                     </span>
@@ -249,14 +249,14 @@ export default function Services() {
                     Digital Collaboration
                   </h3>
 
-                  <p className="mt-2 text-sm leading-[1.7] text-blue-100/85">
+                  <p className="mt-3 text-sm leading-[1.7] text-blue-100/85">
                     Using the right digital tools and teamwork to bring ideas
                     to life — faster and smarter.
                   </p>
 
                   <a
                     href="#contact"
-                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 transition-colors hover:text-cyan-300"
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 transition-colors hover:text-cyan-300"
                   >
                     Let’s Work Together
                     <FaArrowRight className="text-xs" />
