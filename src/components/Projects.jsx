@@ -42,7 +42,7 @@ const projects = [
     description:
       "A beauty commercial featuring a polished brand identity and engaging social-first storytelling.",
     tech: ["Branding", "Commercial", "Instagram Reel"],
-    demo: "https://www.instagram.com/reel/DeSAsPlO1uS/?srtk=c3k2ZGlwYTBvYnpr",
+    demo: "https://www.instagram.com/reel/DeSDQN-SHWw/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
     image: theresaHairline,
   },
 ];
