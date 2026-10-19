@@ -109,27 +109,7 @@ export default function TechStack() {
           </p>
         </div>
 
-        {/* Development */}
-        <div>
-          <h3 className="text-xl font-semibold text-center mb-6">
-            Development
-          </h3>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 fade-in-up">
-            {developmentTools.map((item) => (
-              <div
-                key={item.name}
-                className="bg-[#101e3b] p-5 rounded-xl flex flex-col items-center justify-center space-y-3 min-h-[100px] transition-transform transform hover:scale-105 hover:bg-[#14294c]"
-              >
-                {item.icon}
-
-                <p className="text-sm text-gray-300">
-                  {item.name}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+       
 
         {/* Creative & Content */}
         <div>
@@ -154,7 +134,27 @@ export default function TechStack() {
             ))}
           </div>
         </div>
+ {/* Development */}
+        <div>
+          <h3 className="text-xl font-semibold text-center mb-6">
+            Development
+          </h3>
 
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 fade-in-up">
+            {developmentTools.map((item) => (
+              <div
+                key={item.name}
+                className="bg-[#101e3b] p-5 rounded-xl flex flex-col items-center justify-center space-y-3 min-h-[100px] transition-transform transform hover:scale-105 hover:bg-[#14294c]"
+              >
+                {item.icon}
+
+                <p className="text-sm text-gray-300">
+                  {item.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
