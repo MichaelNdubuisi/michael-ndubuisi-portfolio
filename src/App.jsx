@@ -15,7 +15,6 @@ export default function App() {
       <About />
       <Services />
       <Projects />
-      <TechStack />
       <Contact />
       <Footer />
     </>

@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.hero-section {
+  background-size: 95%;
+  background-repeat: no-repeat;
+  background-position: center calc(50% + 10rem);
+}
+
+@media (max-width: 639px) {
+  .hero-section {
+    background-size: auto 90%;
+    background-position: 40% calc(50% + 4rem);
+  }
+}
+
 /* === Custom Animations === */
 
 /* Fade In Up */

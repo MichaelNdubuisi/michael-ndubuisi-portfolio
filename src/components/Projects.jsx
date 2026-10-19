@@ -1,172 +1,196 @@
-import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaArrowRight, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-import project2 from "../assets/images/project2.webp";
-import project3 from "../assets/images/project3.webp";
-import project4 from "../assets/images/project4.webp";
-import theresaHairline from "../assets/images/theresa-hairline.webp";
+// Replace these paths with your actual project screenshots if needed.
+import edusityImage from "../assets/images/project1.webp";
+import luxeCleanImage from "../assets/images/project3.webp";
+import ngmImage from "../assets/images/project4.webp";
 
 const projects = [
   {
-    title: "Edusity",
+    name: "Edusity",
+    category: "Education Platform",
     description:
-      "A modern education website with a responsive design, smooth navigation, and compelling CTAs.",
-    tech: ["React", "CSS3"],
-    github: "https://github.com/MichaelNdubuisi/landing-page",
-    demo: "https://edusity-bice.vercel.app/",
-    image: project2,
+      "A modern education website featuring responsive layouts, intuitive navigation, and clear calls to action.",
+    image: edusityImage,
+    technologies: ["React", "CSS3", "Responsive Design"],
+    liveUrl: "https://edusity-bice.vercel.app/",
+    githubUrl: "",
+    number: "01",
   },
-
   {
-    title: "LuxeClean",
+    name: "LuxeClean",
+    category: "Service Business Website",
     description:
-      "A premium cleaning service landing page with luxury-themed design and client testimonials.",
-    tech: ["React", "Tailwind CSS"],
-    github: "https://github.com/MichaelNdubuisi/landing-page",
-    demo: "https://luxe-clean.vercel.app/",
-    image: project3,
+      "A premium cleaning service website with elegant visuals, service information, and a polished user experience.",
+    image: luxeCleanImage,
+    technologies: ["React", "Tailwind CSS", "Vite"],
+    liveUrl: "",
+    githubUrl: "",
+    number: "02",
   },
-
   {
-    title: "NGM Collections",
+    name: "NGM Collections",
+    category: "E-commerce",
     description:
-      "An elegant e-commerce platform offering timeless fashion collections with premium quality.",
-    tech: ["React", "Tailwind CSS", "E-commerce"],
-    github: "https://github.com/MichaelNdubuisi/landing-page",
-    demo: "https://ngm-adaeze-shop.vercel.app/",
-    image: project4,
-  },
-
-  {
-    title: "Theresa Hairline",
-    description:
-      "A beauty commercial featuring a polished brand identity and engaging social-first storytelling.",
-    tech: ["Branding", "Commercial", "Instagram Reel"],
-    demo: "https://www.instagram.com/reel/DeSDQN-SHWw/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
-    image: theresaHairline,
+      "A fashion shopping experience showcasing clothing and accessories in a clean, modern storefront.",
+    image: ngmImage,
+    technologies: ["React", "Tailwind CSS", "E-commerce"],
+    liveUrl: "",
+    githubUrl: "",
+    number: "03",
   },
 ];
+
 export default function Projects() {
   return (
     <section
       id="projects"
-      className="bg-primary text-text px-4 sm:px-6 lg:px-12 py-20"
+      className="relative overflow-hidden bg-[#020d1b] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28"
     >
-      <div className="max-w-6xl mx-auto space-y-16">
+      {/* Background glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-40 top-20 h-96 w-96 rounded-full bg-cyan-500/[0.07] blur-[120px]"
+      />
 
-        {/* Section Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold">
-            Projects
-          </h2>
+      <div className="relative mx-auto max-w-7xl">
+        {/* Section heading */}
+        <div className="mb-12 flex flex-col justify-between gap-5 sm:mb-16 sm:flex-row sm:items-end">
+          <div>
+            <div className="mb-4 flex items-center gap-4">
+              <span className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
+                Selected Work
+              </span>
+              <span className="h-px w-14 bg-cyan-400" />
+            </div>
 
-          <p className="text-gray-400 mt-2">
-            Concept Projects and Commercials I've Worked On
-          </p>
-        </motion.div>
+            <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+              Featured <span className="text-cyan-400">Projects</span>
+            </h2>
 
-        {/* Project Cards */}
-        <div className="grid grid-cols-2 gap-4 sm:gap-8 lg:grid-cols-3">
-          {projects.map((project, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: idx * 0.2,
-              }}
-              viewport={{ once: true }}
-              className="bg-[#101e3b] rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition"
+            <p className="mt-4 max-w-xl text-sm leading-7 text-blue-100/75 sm:text-base">
+              A selection of digital experiences I've built, combining
+              thoughtful design, modern technology, and practical solutions.
+            </p>
+          </div>
+
+          <div className="hidden text-right sm:block">
+            <span className="text-4xl font-bold text-white/10">03</span>
+            <p className="text-xs uppercase tracking-[0.2em] text-blue-200/60">
+              Featured projects
+            </p>
+          </div>
+        </div>
+
+        {/* Projects grid */}
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-3">
+          {projects.map((project) => (
+            <article
+              key={project.name}
+              className="group overflow-hidden rounded-2xl border border-[#153550] bg-gradient-to-b from-[#0a1d32] to-[#041326] transition-all duration-500 hover:-translate-y-2 hover:border-cyan-400/50 hover:shadow-[0_20px_60px_rgba(0,190,220,0.08)]"
             >
+              {/* Project image */}
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#071629]">
+                <img
+                  src={project.image}
+                  alt={`${project.name} website preview`}
+                  loading="lazy"
+                  className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                />
 
-              {/* Project Media */}
-              <div className="w-full h-64 bg-black overflow-hidden">
-                {project.video ? (
-                  <video
-                    src={project.video}
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="w-full h-full object-contain"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                ) : (
-                  <img
-                    src={project.image || project.thumbnail}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020d1b]/65 via-transparent to-[#020d1b]/10" />
+
+                <span className="absolute left-4 top-4 rounded-full border border-white/15 bg-[#020d1b]/80 px-3 py-1.5 text-xs font-medium text-cyan-300 backdrop-blur-md">
+                  {project.category}
+                </span>
+
+                <span className="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full border border-cyan-400/50 bg-[#020d1b]/80 text-cyan-400 transition-all duration-300 group-hover:bg-cyan-400 group-hover:text-[#020d1b]">
+                  <FaArrowRight className="-rotate-45 transition-transform duration-300 group-hover:rotate-0" />
+                </span>
               </div>
 
-              {/* Project Information */}
-              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-
-                {/* Title & Description */}
-                <div>
-                  <h3 className="text-xl font-semibold">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-sm text-gray-300 mt-2">
-                    {project.description}
-                  </p>
+              {/* Project details */}
+              <div className="p-6 sm:p-7">
+                <div className="mb-3 flex items-center gap-3">
+                  <span className="text-xs font-semibold tracking-[0.2em] text-cyan-400">
+                    {project.number}
+                  </span>
+                  <span className="h-px flex-1 bg-[#153550]" />
                 </div>
 
-                {/* Skills / Technologies */}
-                {project.tech?.length > 0 && (
-                  <ul className="flex flex-wrap text-sm text-accent gap-2">
-                    {project.tech.map((tech, i) => (
-                      <li
-                        key={i}
-                        className="px-2 py-1 bg-[#0f1b34] rounded"
-                      >
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                <h3 className="text-2xl font-bold tracking-tight transition-colors group-hover:text-cyan-300">
+                  {project.name}
+                </h3>
 
-                {/* Links */}
-                {(project.github || project.demo) && (
-                  <div className="flex gap-4 text-accent pt-2">
+                <p className="mt-3 min-h-[72px] text-sm leading-6 text-blue-100/75">
+                  {project.description}
+                </p>
 
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={`View ${project.title} GitHub`}
-                      >
-                        <FaGithub size={20} />
-                      </a>
-                    )}
+                {/* Technologies */}
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {project.technologies.map((technology) => (
+                    <span
+                      key={technology}
+                      className="rounded-lg border border-cyan-400/15 bg-cyan-400/[0.06] px-3 py-1.5 text-xs text-cyan-200/90"
+                    >
+                      {technology}
+                    </span>
+                  ))}
+                </div>
 
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={`View ${project.title} live demo`}
-                      >
-                        <FaExternalLinkAlt size={18} />
-                      </a>
-                    )}
+                {/* Project links */}
+                <div className="mt-7 flex flex-wrap items-center gap-5 border-t border-white/[0.08] pt-5">
+                  {project.liveUrl ? (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 transition-colors hover:text-cyan-200"
+                    >
+                      Live Preview
+                      <FaExternalLinkAlt className="text-xs" />
+                    </a>
+                  ) : (
+                    <span className="text-sm text-blue-200/50">
+                      Live link coming soon
+                    </span>
+                  )}
 
-                  </div>
-                )}
-
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-blue-100/80 transition-colors hover:text-white"
+                    >
+                      <FaGithub className="text-base" />
+                      Source Code
+                    </a>
+                  )}
+                </div>
               </div>
-            </motion.div>
+            </article>
           ))}
+        </div>
+
+        {/* Closing CTA */}
+        <div className="mt-12 flex flex-col items-start justify-between gap-5 rounded-2xl border border-[#153550] bg-[#06172a]/80 p-6 sm:mt-16 sm:flex-row sm:items-center sm:p-8">
+          <div>
+            <h3 className="text-xl font-bold sm:text-2xl">
+              Have a project in mind?
+            </h3>
+            <p className="mt-2 text-sm leading-6 text-blue-100/70">
+              Let's turn your idea into something meaningful.
+            </p>
+          </div>
+
+          <a
+            href="#contact"
+            className="inline-flex shrink-0 items-center gap-3 rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-[#020d1b] transition-all hover:bg-cyan-300"
+          >
+            Let's Talk
+            <FaArrowRight />
+          </a>
         </div>
       </div>
     </section>
