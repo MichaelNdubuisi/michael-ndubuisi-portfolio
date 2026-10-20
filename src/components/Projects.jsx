@@ -4,16 +4,18 @@ import { FaArrowRight, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import edusityImage from "../assets/images/project1.webp";
 import luxeCleanImage from "../assets/images/project3.webp";
 import ngmImage from "../assets/images/project4.webp";
+import theresaHairlineImage from "../assets/images/theresa-hairline.webp";
 
 const projects = [
   {
-    name: "Edusity",
-    category: "Education Platform",
+    name: "Theresa Hairline",
+    category: "Social Media Content",
     description:
-      "A modern education website featuring responsive layouts, intuitive navigation, and clear calls to action.",
-    image: edusityImage,
-    technologies: ["React", "CSS3", "Responsive Design"],
-    liveUrl: "https://edusity-bice.vercel.app/",
+      "A promotional Instagram Reel showcasing Theresa Hairline, created as social media content.",
+    image: theresaHairlineImage,
+    technologies: ["Content Creation", "Instagram", "Video"],
+    liveUrl: "https://www.instagram.com/reel/DetZcPtt4xq/",
+    liveLinkLabel: "Watch Reel",
     githubUrl: "",
     number: "01",
   },
@@ -39,6 +41,7 @@ const projects = [
     githubUrl: "",
     number: "03",
   },
+  
 ];
 
 export default function Projects() {
@@ -69,13 +72,13 @@ export default function Projects() {
             </h2>
 
             <p className="mt-4 max-w-xl text-sm leading-7 text-blue-100/75 sm:text-base">
-              A selection of digital experiences I've built, combining
-              thoughtful design, modern technology, and practical solutions.
+              A selection of digital experiences and social media content I've
+              created, combining thoughtful design and engaging storytelling.
             </p>
           </div>
 
           <div className="hidden text-right sm:block">
-            <span className="text-4xl font-bold text-white/10">03</span>
+            <span className="text-4xl font-bold text-white/10">04</span>
             <p className="text-xs uppercase tracking-[0.2em] text-blue-200/60">
               Featured projects
             </p>
@@ -93,7 +96,7 @@ export default function Projects() {
               <div className="relative aspect-[16/10] overflow-hidden bg-[#071629]">
                 <img
                   src={project.image}
-                  alt={`${project.name} website preview`}
+                  alt={`${project.name} project preview`}
                   loading="lazy"
                   className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
@@ -147,7 +150,7 @@ export default function Projects() {
                       rel="noreferrer"
                       className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 transition-colors hover:text-cyan-200"
                     >
-                      Live Preview
+                      {project.liveLinkLabel || "Live Preview"}
                       <FaExternalLinkAlt className="text-xs" />
                     </a>
                   ) : (
