@@ -36,23 +36,24 @@ export default function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="relative w-full max-w-2xl space-y-8 text-left sm:-top-3 sm:space-y-6"
+          className="relative mx-auto w-full max-w-2xl space-y-6 text-center sm:-top-3 sm:space-y-6 sm:text-left"
         >
           <Motion.h1
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="max-w-[18ch] text-3xl font-bold leading-[1.2] tracking-tight sm:max-w-none sm:text-4xl sm:leading-tight sm:tracking-normal md:text-5xl lg:text-6xl"
+            className="mx-auto max-w-[18ch] text-3xl font-bold leading-[1.25] tracking-tight sm:mx-0 sm:max-w-none sm:text-4xl sm:leading-tight sm:tracking-normal md:text-5xl lg:text-6xl"
           >
-            Creative Digital
-            {" "}Professional &amp; Web Developer
+            Creative Digital{" "}
+            <span className="block sm:inline">Professional</span>{" "}
+            <span className="block sm:inline">&amp; Web Developer</span>
           </Motion.h1>
 
           <Motion.p
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="max-w-[38ch] text-base leading-7 text-gray-300 sm:max-w-xl sm:text-lg sm:leading-relaxed"
+            className="mx-auto max-w-[38ch] text-base leading-7 text-gray-300 sm:mx-0 sm:max-w-xl sm:text-lg sm:leading-relaxed"
           >
             I bring ideas to life through engaging content, thoughtful design,
             video, and modern web experiences.
