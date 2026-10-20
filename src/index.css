@@ -10,8 +10,8 @@
 
 @media (max-width: 639px) {
   .hero-section {
-    background-size: auto 90%;
-    background-position: 40% calc(50% + 4rem);
+    background-size: auto 82%;
+    background-position: 42% calc(50% + 3rem);
   }
 }
 

@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="hero-section relative isolate flex w-full min-h-[100svh] items-center justify-center bg-primary px-5 pt-32 pb-16 text-text sm:min-h-screen sm:px-6 sm:pt-24 sm:pb-8 md:px-8 lg:px-12"
+      className="hero-section relative isolate flex w-full min-h-[100svh] items-center justify-center bg-primary px-6 pt-36 pb-20 text-text sm:min-h-screen sm:px-6 sm:pt-24 sm:pb-8 md:px-8 lg:px-12"
       style={{
         backgroundImage: `url(${heroImage})`,
       }}
@@ -42,18 +42,17 @@ export default function Hero() {
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+            className="max-w-[18ch] text-3xl font-bold leading-[1.2] tracking-tight sm:max-w-none sm:text-4xl sm:leading-tight sm:tracking-normal md:text-5xl lg:text-6xl"
           >
             Creative Digital
-            <br className="sm:hidden" /> Professional
-            <br className="sm:hidden" /> &amp; Web Developer
+            {" "}Professional &amp; Web Developer
           </Motion.h1>
 
           <Motion.p
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="max-w-xl text-base leading-relaxed text-gray-300 sm:text-lg"
+            className="max-w-[38ch] text-base leading-7 text-gray-300 sm:max-w-xl sm:text-lg sm:leading-relaxed"
           >
             I bring ideas to life through engaging content, thoughtful design,
             video, and modern web experiences.
