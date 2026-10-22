@@ -14,7 +14,7 @@ const projects = [
       "A promotional Instagram Reel showcasing Theresa Hairline, created as social media content.",
     image: theresaHairlineImage,
     technologies: ["Content Creation", "Instagram", "Video"],
-    liveUrl: "https://www.instagram.com/reel/DetZcPtt4xq/",
+    liveUrl: "https://www.instagram.com/reel/DeSDQN-SHWw/?utm_source=ig_web_copy_link&obrf=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
     liveLinkLabel: "Watch Reel",
     githubUrl: "",
     number: "01",

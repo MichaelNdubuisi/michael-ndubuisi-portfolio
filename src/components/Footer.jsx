@@ -12,7 +12,6 @@ const navigation = [
   { label: "About", to: "about" },
   { label: "Services", to: "services" },
   { label: "Projects", to: "projects" },
-  { label: "Tech Stack", to: "stack" },
   { label: "Contact", to: "contact" },
 ];
 

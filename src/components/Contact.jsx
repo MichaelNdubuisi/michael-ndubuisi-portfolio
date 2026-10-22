@@ -90,7 +90,7 @@ export default function Contact() {
                 className="mt-2 inline-flex items-center gap-2 text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200 sm:text-base"
               >
                 <BsEnvelope />
-                YOUR_EMAIL@example.com
+                mr.michaelndubuisi@gmail.com
               </a>
             </div>
           </div>
