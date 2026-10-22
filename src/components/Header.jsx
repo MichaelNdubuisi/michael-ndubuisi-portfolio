@@ -17,7 +17,7 @@ export default function Header() {
       transition={{ duration: 0.5 }}
       className="fixed top-0 w-full bg-transparent backdrop-blur-md text-text border-b border-white/10 shadow-sm z-50"
     >
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-1 py-2 flex justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-3 w-28 h-24">
           <a href="#home" className="hover:opacity-80 transition duration-300">
@@ -29,7 +29,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-6 text-sm font-medium text-white">
+        <div className="hidden md:flex items-center space-x-2 text-sm font-medium text-white">
           {navItems.map((item) => (
             <a
               key={item}
