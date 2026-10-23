@@ -19,7 +19,7 @@ export default function Header() {
       transition={{ duration: 0.5 }}
       className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#020d1b]/85 text-white shadow-sm backdrop-blur-xl"
     >
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-2 px-3 py-2 sm:px-8 lg:px-12">
         {/* Logo — aligned to the far left */}
         <a
           href="#home"
