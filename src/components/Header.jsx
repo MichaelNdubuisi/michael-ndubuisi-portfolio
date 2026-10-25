@@ -29,7 +29,6 @@ export default function Header() {
           <span className="flex items-center whitespace-nowrap text-lg font-extrabold tracking-tight sm:text-xl">
             <span className="text-white">Michael</span>
             <span className="ml-1.5 text-accent">Ndubuisi</span>
-            <span className="ml-1 text-accent">.</span>
           </span>
         </a>
 
