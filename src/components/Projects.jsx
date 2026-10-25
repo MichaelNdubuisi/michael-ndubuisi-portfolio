@@ -5,6 +5,8 @@ import luxeCleanImage from "../assets/images/project3.webp";
 import ngmImage from "../assets/images/project4.webp";
 import theresaHairlineImage from "../assets/images/theresa-hairline.webp";
 import canFruitJuiceImage from "../assets/images/Graphic Design (2).png";
+import adsOneImage from "../assets/images/Ads 1.jpeg";
+import ugcImage from "../assets/images/UGC.jpeg";
 
 const projects = [
   {
@@ -53,6 +55,30 @@ const projects = [
     githubUrl: "",
     number: "04",
   },
+  {
+    name: "Ads 1",
+    category: "Social Media Ad",
+    description:
+      "A short-form promotional video designed to capture attention quickly with strong visual storytelling and direct brand messaging.",
+    image: adsOneImage,
+    technologies: ["TikTok", "Short-form Video", "Advertising"],
+    liveUrl: "https://vm.tiktok.com/ZN8DDCvFm/",
+    liveLinkLabel: "Watch Ad",
+    githubUrl: "",
+    number: "05",
+  },
+  {
+    name: "UGC",
+    category: "User Generated Content",
+    description:
+      "A lifestyle-driven short-form video that blends authentic product storytelling with engaging motion and social-first creative direction.",
+    image: ugcImage,
+    technologies: ["UGC", "Instagram", "Short-form Video"],
+    liveUrl: "https://www.instagram.com/reel/DetZcPtt4xq/?exln=MWRqd3NsNmZkNXhyNw==",
+    liveLinkLabel: "Watch Reel",
+    githubUrl: "",
+    number: "06",
+  },
 ];
 
 export default function Projects() {
@@ -90,7 +116,7 @@ export default function Projects() {
           </div>
 
           <div className="hidden text-right sm:block">
-            <span className="text-4xl font-bold text-white/10">04</span>
+            <span className="text-4xl font-bold text-white/10">06</span>
             <p className="text-xs uppercase tracking-[0.2em] text-blue-200/60">
               Featured projects
             </p>
