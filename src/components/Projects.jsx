@@ -1,10 +1,10 @@
 import { FaArrowRight, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 // Replace these paths with your actual project screenshots if needed.
-import edusityImage from "../assets/images/project1.webp";
 import luxeCleanImage from "../assets/images/project3.webp";
 import ngmImage from "../assets/images/project4.webp";
 import theresaHairlineImage from "../assets/images/theresa-hairline.webp";
+import canFruitJuiceImage from "../assets/images/Graphic Design (2).png";
 
 const projects = [
   {
@@ -37,11 +37,22 @@ const projects = [
       "A fashion shopping experience showcasing clothing and accessories in a clean, modern storefront.",
     image: ngmImage,
     technologies: ["React", "Tailwind CSS", "E-commerce"],
-    liveUrl: "",
+    liveUrl: "https://ngm-adaeze-shop.vercel.app/",
     githubUrl: "",
     number: "03",
   },
-  
+  {
+    name: "CAN Fruit Juice",
+    category: "Graphic Design",
+    description:
+      "A vibrant promotional campaign and packaging concept for CAN Fruit Juice, built around fresh fruit, bold color, and natural ingredients.",
+    image: canFruitJuiceImage,
+    technologies: ["Brand Identity", "Packaging Design", "Advertising"],
+    liveUrl: canFruitJuiceImage,
+    liveLinkLabel: "View Design",
+    githubUrl: "",
+    number: "04",
+  },
 ];
 
 export default function Projects() {
@@ -72,8 +83,9 @@ export default function Projects() {
             </h2>
 
             <p className="mt-4 max-w-xl text-sm leading-7 text-blue-100/75 sm:text-base">
-              A selection of digital experiences and social media content I've
-              created, combining thoughtful design and engaging storytelling.
+              A selection of digital experiences, graphic design, and social
+              media content I've created, combining thoughtful design and
+              engaging storytelling.
             </p>
           </div>
 
