@@ -1,82 +1,166 @@
+
+import { useState } from "react";
 import {
   FaArrowRight,
   FaBullhorn,
-  FaCode,
-  FaPaintBrush,
-  FaPenNib,
-  FaUsers,
+  FaPlay,
+  FaTimes,
   FaVideo,
 } from "react-icons/fa";
 
-import contentDevelopmentImage from "../assets/images/Content Development.png";
-import graphicDesignImage from "../assets/images/Graphic Design.png";
-import brandingCommunicationsImage from "../assets/images/Branding & Communications.png";
-import videoEditingImage from "../assets/images/Video Editing.png";
-import websiteDesignImage from "../assets/images/Website Design.png";
+import cinematicImage from "../assets/images/Branding & Communications.png";
+import ugcImage from "../assets/images/Content Development.png";
+import editingImage from "../assets/images/Video Editing.png";
 
 const services = [
   {
     number: "01",
-    name: "Website Design",
+    name: "Cinematic Advertising",
     description:
-      "Modern, responsive and user-friendly websites that look great and perform seamlessly across all devices.",
-    icon: <FaCode />,
-    image: websiteDesignImage,
-    link: "View Projects",
+      "High-impact visual campaigns built around powerful storytelling, creative direction and cinematic production that make brands memorable.",
+    image: cinematicImage,
+    icon: <FaBullhorn />,
+    label: "MAKE YOUR BRAND UNFORGETTABLE",
     featured: true,
   },
   {
     number: "02",
-    name: "Graphic Design",
+    name: "UGC-Style Video Production",
     description:
-      "Eye-catching visuals, clean layouts and creative designs that bring ideas to life.",
-    icon: <FaPaintBrush />,
-    image: graphicDesignImage,
-    link: "View Designs",
+      "Authentic, engaging product and lifestyle videos designed to connect with audiences, build interest and inspire action.",
+    image: ugcImage,
+    icon: <FaPlay />,
+    label: "CONTENT THAT CONNECTS",
   },
   {
     number: "03",
-    name: "Video Editing",
+    name: "Professional Video Editing",
     description:
-      "Engaging videos that tell your story, grab attention and leave a lasting impression.",
+      "Polished, platform-ready videos with thoughtful pacing, sound design, transitions and visual storytelling.",
+    image: editingImage,
     icon: <FaVideo />,
-    image: videoEditingImage,
-    link: "View Videos",
-  },
-  {
-    number: "04",
-    name: "Content Creation",
-    description:
-      "Scroll-stopping content, from social media posts to reels and brand storytelling.",
-    icon: <FaPenNib />,
-    image: contentDevelopmentImage,
-    link: "View Content",
-  },
-  {
-    number: "05",
-    name: "Branding & Communications",
-    description:
-      "Strong brand identity and clear messaging that builds trust and loyalty.",
-    icon: <FaBullhorn />,
-    image: brandingCommunicationsImage,
-    link: "View Branding",
+    label: "EVERY FRAME HAS A PURPOSE",
   },
 ];
 
-function ServiceIcon({ children }) {
-  return (
-    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-400 bg-cyan-400/10 text-2xl text-cyan-400 shadow-[inset_0_0_15px_rgba(34,211,238,0.12)]">
-      {children}
-    </span>
-  );
-}
+function ServiceCard({ service }) {
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 
-function ServiceLink({ children }) {
   return (
-    <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 transition-all duration-300 group-hover:gap-3 group-hover:text-cyan-300">
-      {children}
-      <FaArrowRight className="text-xs" aria-hidden="true" />
-    </span>
+    <article className="group relative">
+      <div className="service-mobile-card relative aspect-[4/5] overflow-hidden rounded-xl border border-white/10 bg-[#101722] transition-all duration-300 hover:border-cyan-400/50 md:hidden">
+        <img
+          src={service.image}
+          alt={`${service.name} creative work`}
+          loading="lazy"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#05080e]/90 via-[#05080e]/15 to-black/20" />
+
+        <span className="absolute left-2.5 top-2.5 text-[10px] font-semibold tracking-[0.18em] text-white/75">
+          {service.number}
+        </span>
+        <span className="absolute right-2.5 top-2.5 flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/35 text-sm text-cyan-300 backdrop-blur-md">
+          {service.icon}
+        </span>
+
+        <div className="absolute inset-x-0 bottom-0 p-3">
+          <p className="truncate text-[9px] font-bold uppercase tracking-[0.13em] text-cyan-300">
+            {service.label}
+          </p>
+          <h3 className="mt-1 text-sm font-bold leading-tight text-white">
+            {service.name}
+          </h3>
+        </div>
+
+        <button
+          type="button"
+          aria-expanded={isDetailsOpen}
+          aria-label={`${isDetailsOpen ? "Hide" : "Show"} details for ${service.name}`}
+          onClick={() => setIsDetailsOpen(!isDetailsOpen)}
+          className="absolute bottom-2.5 right-2.5 rounded-full border border-white/20 bg-[#080b12]/75 px-2.5 py-1.5 text-[10px] font-semibold text-white backdrop-blur-md transition-colors hover:border-cyan-400/50 hover:text-cyan-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+        >
+          Details
+        </button>
+
+        <div
+          className={`service-mobile-details invisible pointer-events-none absolute inset-0 z-10 flex flex-col justify-center rounded-xl bg-[#0b111c]/95 p-3 opacity-0 backdrop-blur-md transition-all duration-200 ${
+            isDetailsOpen
+              ? "visible pointer-events-auto opacity-100"
+              : ""
+          }`}
+        >
+          <button
+            type="button"
+            aria-label={`Close ${service.name} details`}
+            onClick={() => setIsDetailsOpen(false)}
+            className="absolute right-2 top-2 rounded-full p-1.5 text-white/55 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+          >
+            <FaTimes />
+          </button>
+          <p className="pr-6 text-[9px] font-bold uppercase tracking-wider text-cyan-300">
+            {service.label}
+          </p>
+          <h3 className="mt-1 text-sm font-bold leading-tight text-white">
+            {service.name}
+          </h3>
+          <p className="mt-2 text-[10px] leading-4 text-white/65">
+            {service.description}
+          </p>
+          <a
+            href="#contact"
+            onClick={() => setIsDetailsOpen(false)}
+            className="mt-3 inline-flex w-fit items-center gap-1.5 text-[10px] font-bold text-cyan-300 transition-colors hover:text-cyan-200"
+          >
+            Discuss a Project
+            <FaArrowRight className="text-[9px]" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+
+      <div className="relative isolate hidden min-h-[390px] overflow-hidden rounded-2xl border border-white/10 bg-[#101722] transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/50 md:block">
+        <img
+          src={service.image}
+          alt={`${service.name} creative work`}
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-[#05080e] via-[#05080e]/75 to-[#05080e]/10" />
+
+        <div className="absolute inset-x-0 top-0 flex items-center justify-between p-6">
+          <span className="text-sm font-semibold tracking-[0.2em] text-white/70">
+            {service.number}
+          </span>
+
+          <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-black/30 text-lg text-cyan-300 backdrop-blur-md transition-all duration-300 group-hover:border-cyan-400 group-hover:bg-cyan-400 group-hover:text-[#05080e]">
+            {service.icon}
+          </span>
+        </div>
+
+        <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">
+          <span className="mb-3 block text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-300 sm:text-xs">
+            {service.label}
+          </span>
+
+          <h3 className="max-w-[340px] text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl">
+            {service.name}
+          </h3>
+
+          <p className="mt-4 max-w-[390px] text-sm leading-7 text-white/75">
+            {service.description}
+          </p>
+
+          <a
+            href="#contact"
+            className="mt-6 inline-flex items-center gap-3 text-sm font-semibold text-cyan-300 transition-all duration-300 group-hover:gap-4"
+          >
+            Discuss a Project
+            <FaArrowRight className="text-xs" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+    </article>
   );
 }
 
@@ -84,197 +168,77 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-[#020d1b] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8"
+      className="relative overflow-hidden bg-[#080b12] px-4 py-20 text-white sm:px-6 sm:py-24 lg:px-8"
     >
-      {/* Subtle background glow */}
+      {/* Background atmosphere */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-40 top-40 h-80 w-80 rounded-full bg-cyan-500/[0.06] blur-[120px]"
+        className="pointer-events-none absolute -right-40 top-20 h-96 w-96 rounded-full bg-cyan-500/[0.07] blur-[130px]"
       />
 
-      <div className="relative mx-auto max-w-[1060px]">
-        {/* Section heading */}
-        <div className="mb-10 flex flex-col justify-between gap-6 sm:mb-10 sm:flex-row sm:items-center">
-          <div className="max-w-[580px]">
-            <div className="mb-3 flex items-center gap-5">
-              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400 sm:text-base">
-                What I Do
+      <div className="relative mx-auto max-w-[1200px]">
+        {/* Section introduction */}
+        <div className="mb-12 flex flex-col justify-between gap-7 lg:mb-16 lg:flex-row lg:items-end">
+          <div className="max-w-[680px]">
+            <div className="mb-5 flex items-center gap-4">
+              <span className="text-xs font-bold uppercase tracking-[0.25em] text-cyan-400">
+                What We Create
               </span>
-              <span className="h-px w-16 bg-cyan-400" />
+              <span className="h-px w-14 bg-cyan-400/70" />
             </div>
 
-            <h2 className="text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-[56px]">
-              Skills &amp;{" "}
-              <span className="text-cyan-400">Expertise</span>
+            <h2 className="text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
+              Creative work.
+              <br />
+              <span className="text-cyan-400">Powerful impact.</span>
             </h2>
 
-            <p className="mt-4 max-w-[510px] text-sm leading-7 text-blue-100/85 sm:text-base">
-              I create digital experiences that help brands communicate,
-              connect and grow. Here’s what I bring to the table.
+            <p className="mt-6 max-w-[570px] text-sm leading-8 text-white/60 sm:text-base">
+              We help businesses turn ideas into visual experiences people
+              notice, connect with and remember. From cinematic campaigns to
+              engaging short-form content, every project starts with a story.
             </p>
           </div>
 
-          <div className="hidden items-center gap-8 sm:flex">
-            <p className="max-w-[150px] -rotate-6 font-serif text-lg italic leading-6 text-blue-300/80">
-              Turning ideas
-              <br />
-              into real results.
-              <span className="ml-10 mt-2 block h-px w-16 rotate-[-12deg] bg-blue-300/80" />
-            </p>
-
-            <a
-              href="#service-collaboration"
-              aria-label="Explore collaboration services"
-              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-cyan-400 text-lg text-cyan-400 transition-all duration-300 hover:bg-cyan-400 hover:text-[#020d1b]"
-            >
-              <FaArrowRight />
-            </a>
-          </div>
-        </div>
-
-        {/* Services grid */}
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2">
-          {/* Featured website design card */}
-          <article className="group relative isolate min-h-[310px] overflow-hidden rounded-2xl border border-[#123451] bg-[#031225] sm:col-span-2 sm:min-h-[290px]">
-            <img
-              src={websiteDesignImage}
-              alt="Website design project preview"
-              className="absolute inset-y-0 right-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03] sm:w-[72%]"
-            />
-
-            <div className="absolute inset-0 -z-0 bg-gradient-to-r from-[#020d1b] via-[#020d1b]/95 to-[#020d1b]/15 sm:via-[#020d1b]/90" />
-
-            <div className="relative z-10 flex min-h-[310px] max-w-[360px] flex-col items-start justify-center p-7 sm:min-h-[290px] sm:p-8">
-              <div className="mb-4 flex items-center gap-5">
-                <ServiceIcon>
-                  <FaCode />
-                </ServiceIcon>
-                <span className="text-base font-semibold text-cyan-400">
-                  01
-                </span>
-              </div>
-
-              <h3 className="text-2xl font-bold tracking-tight sm:text-[27px]">
-                Website Design
-              </h3>
-
-              <p className="mt-4 max-w-[320px] text-sm leading-[1.8] text-blue-100/85 sm:text-base">
-                Modern, responsive and user-friendly websites that look great
-                and perform seamlessly across all devices.
-              </p>
-
-              <a
-                href="#projects"
-                className="group/link mt-6 inline-flex items-center gap-2 text-base font-semibold text-cyan-400 transition-colors hover:text-cyan-300"
-              >
-                View Projects
-                <FaArrowRight className="text-xs transition-transform group-hover/link:translate-x-1" />
-              </a>
-            </div>
-          </article>
-
-          {/* Four service cards */}
-          {services
-            .filter((service) => !service.featured)
-            .map((service) => (
-              <article
-                key={service.number}
-                className="group flex min-h-[230px] overflow-hidden rounded-2xl border border-[#123451] bg-[#031225] transition-all duration-300 hover:border-cyan-400/40 hover:bg-[#04172a] sm:min-h-[240px]"
-              >
-                <div className="relative min-h-full w-[42%] shrink-0 overflow-hidden sm:w-[44%]">
-                  <img
-                    src={service.image}
-                    alt={`${service.name} example`}
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#031225]/20" />
-                </div>
-
-                <div className="flex min-w-0 flex-1 flex-col items-start justify-center p-5 sm:p-6">
-                  <div className="mb-4 flex items-center gap-4">
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-cyan-400/70 bg-cyan-400/10 text-lg text-cyan-400">
-                      {service.icon}
-                    </span>
-                    <span className="text-sm font-semibold text-cyan-400">
-                      {service.number}
-                    </span>
-                  </div>
-
-                  <h3 className="text-base font-bold leading-snug tracking-tight sm:text-xl">
-                    {service.name}
-                  </h3>
-
-                  <p className="mt-3 text-xs leading-[1.7] text-blue-100/85 sm:text-sm">
-                    {service.description}
-                  </p>
-
-                  <a
-                    href="#projects"
-                    className="mt-5 inline-flex items-center gap-2 text-xs font-semibold text-cyan-400 transition-colors hover:text-cyan-300 sm:text-sm"
-                  >
-                    {service.link}
-                    <FaArrowRight className="text-[10px]" />
-                  </a>
-                </div>
-              </article>
-            ))}
-
-          {/* Digital collaboration card */}
-          <article
-            id="service-collaboration"
-            className="group overflow-hidden rounded-2xl border border-[#123451] bg-[#031225] transition-all duration-300 hover:border-cyan-400/40 sm:col-span-2"
+          <a
+            href="#contact"
+            className="inline-flex w-fit items-center gap-3 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-400 hover:text-[#080b12]"
           >
-            <div className="grid min-h-[190px] grid-cols-1 sm:grid-cols-[34%_1fr]">
-              <div className="relative min-h-[190px] overflow-hidden sm:min-h-[190px]">
-                <img
-                  src={contentDevelopmentImage}
-                  alt="Digital tools and creative collaboration workspace"
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#031225]/30 to-transparent sm:bg-gradient-to-r sm:from-transparent sm:to-[#031225]/30" />
-              </div>
-
-              <div className="flex items-center justify-between gap-5 p-6 sm:px-8 sm:py-7">
-                <div className="max-w-[340px]">
-                  <div className="mb-3 flex items-center gap-5">
-                    <span className="text-2xl text-cyan-400">
-                      <FaUsers />
-                    </span>
-                    <span className="text-sm font-semibold text-cyan-400">
-                      06
-                    </span>
-                  </div>
-
-                  <h3 className="text-lg font-bold tracking-tight sm:text-xl">
-                    Digital Collaboration
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-[1.7] text-blue-100/85">
-                    Using the right digital tools and teamwork to bring ideas
-                    to life — faster and smarter.
-                  </p>
-
-                  <a
-                    href="#contact"
-                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 transition-colors hover:text-cyan-300"
-                  >
-                    Let’s Work Together
-                    <FaArrowRight className="text-xs" />
-                  </a>
-                </div>
-
-                <div className="hidden shrink-0 -rotate-6 pr-3 font-serif text-lg italic leading-6 text-blue-300/80 lg:block">
-                  Great ideas
-                  <br />
-                  work better
-                  <br />
-                  together.
-                  <span className="ml-4 mt-3 block h-px w-16 rotate-[-12deg] bg-blue-300/80" />
-                </div>
-              </div>
-            </div>
-          </article>
+            Start a Project
+            <FaArrowRight className="text-xs" />
+          </a>
         </div>
+
+        {/* Service cards */}
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
+          {services.map((service) => (
+            <ServiceCard key={service.number} service={service} />
+          ))}
+        </div>
+
+        {/* Closing statement */}
+        <div className="mt-12 flex flex-col gap-5 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-lg font-semibold text-white">
+              Your next idea deserves to be seen.
+            </p>
+            <p className="mt-2 text-sm text-white/50">
+              Let's create something worth watching.
+            </p>
+          </div>
+
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 text-sm font-bold text-cyan-400 transition-colors hover:text-cyan-300"
+          >
+            Work with Mikos Digital
+            <FaArrowRight className="text-xs" />
+          </a>
+        </div>
+
+        <p className="mt-10 text-center text-xs font-medium tracking-[0.18em] text-white/35">
+          MIKOS DIGITAL — TURNING IDEAS INTO DIGITAL REALITY.
+        </p>
       </div>
     </section>
   );

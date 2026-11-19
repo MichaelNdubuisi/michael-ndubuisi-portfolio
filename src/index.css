@@ -15,6 +15,20 @@
   }
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .project-mobile-card:hover .project-mobile-details {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .service-mobile-card:hover .service-mobile-details {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
 /* === Custom Animations === */
 
 /* Fade In Up */
